@@ -1,0 +1,15 @@
+.link{
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 6px;
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 
+// 公共图片按钮组件
+import Link from '../../../Link/Link';
+
 import {
     NAVI_PAGE_DATA,
-    NAV_PAGE_UL_CLASS,
-    NAV_PAGE_ITEM_CLASS,
 } from './../../contants';
 
 // 展示导航的元素接口类型
@@ -20,9 +21,9 @@ const NaviPage: React.FC = () => {
         return childrenData.map((child, index) => {
             const {title, link} = child;
             return (
-                <li key={index} className={NAV_PAGE_ITEM_CLASS}>
+                <li key={index} className='nav-page-item'>
                     <a href={link}>
-                        {title}
+                        <Link title={title} />
                     </a>
                 </li>
             )
@@ -30,7 +31,7 @@ const NaviPage: React.FC = () => {
     };
 
     return (
-        <ul className={NAV_PAGE_UL_CLASS}>
+        <ul className='nav-page-ul'>
             {renderChildren(NAVI_PAGE_DATA)}
         </ul>
     )

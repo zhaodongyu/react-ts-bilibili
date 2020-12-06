@@ -36,6 +36,7 @@ export const NAVI_PAGE_DATA = [
     }
 ];
 
-// className
-export const NAV_PAGE_UL_CLASS: string = `nav-page-ul`;
-export const NAV_PAGE_ITEM_CLASS: string = `nav-page-item`;
+
+
+// 图片url地址
+export const loginImgUrl = `https://static.hdslb.com/images/akari.jpg`;
