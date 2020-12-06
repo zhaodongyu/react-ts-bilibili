@@ -1,0 +1,21 @@
+.navigation {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: $navigation-body-padding;
+    // 对齐方式
+    justify-content: space-between;
+    >.nav-page-ul{
+        display: flex;
+        align-items: center;
+        height: $navigation-item-height;
+        >.nav-page-item{
+            margin-right: $navigation-item-margin-right;
+            font-size: $navigation-item-font-size;
+            a {
+               color: $navigation-item-color;
+            }
+        }
+
+    }
+}
