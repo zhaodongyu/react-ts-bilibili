@@ -11,7 +11,7 @@ import ContentBox from './components/ContentBox/ContentBox';
 
 function Home() {
     return (
-        <div >
+        <div className="home-container">
             <Menu />
             <WrapReport />
             <ContentBox />

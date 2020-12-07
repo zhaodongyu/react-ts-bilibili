@@ -1,0 +1,11 @@
+.home-container{
+  width: 1630px;
+  margin:0 auto;
+  .wrap-container{
+    display: flex;
+    padding: 20px 0;
+    .primary-container{
+      display: flex;
+    }
+  }
+}

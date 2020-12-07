@@ -1,17 +1,17 @@
 // 公共变量样式
 @import 'contants';
-
 // 修改默认
 @import 'reboot';
-
 // 导航样式
 @import '../common/NavigationBar/style';
-
 // 公共连接组件
 @import '../common/Link/style';
-
 // 公共按钮组件
 @import '../common/Button/style';
-
 // 上方广告banner
 @import '../common/HeaderAdv/style';
+// 公共icon按钮
+@import '../common/IconButton/style';
+
+// 首页wrapper样式
+@import '../pages/Home/style';
