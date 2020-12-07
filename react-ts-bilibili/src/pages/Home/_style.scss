@@ -1,13 +1,14 @@
 .home-container {
   width: 1630px;
   margin: 0 auto;
-  display: flex;
   padding: 20px 0;
   .wrap-container {
     width: 100%;
-    display: flex;
-    .primary-container {
-      display: flex;
+    .wrap-item-container{
+       display: flex;
+       .primary-container {
+         display: flex;
+       }
     }
   }
   .channel-container {
@@ -53,5 +54,28 @@
     height: 58px;
     border-left: 1px solid #e7e7e7;
     margin: 0 20px;
+  }
+  .wrap-report-container{
+    display: flex;
+    justify-content: space-between;
+    .carousel-container{
+      width: 550px;
+      height: 242px;
+      overflow: hidden;
+      background: #000;
+    }
+    .recommend-container{
+      display: flex;
+      width: 1070px;
+      height: 242px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      .recommend-item{
+        width: 206px;
+        height: 116px;
+        background: #000;
+      }
+    }
   }
 }

@@ -13,8 +13,8 @@ function Home() {
     return (
         <div className="home-container">
             <Menu />
-            {/*<WrapReport />*/}
-            {/*<ContentBox />*/}
+            <WrapReport />
+            <ContentBox />
         </div>
     );
 }

@@ -201,11 +201,13 @@ function Menu() {
 
     return (
         <div className="wrap-container">
-            {renderPrimary(menuData)}
-            <span className="home-line" />
-            {renderChannel(channelData)}
-            <span className="home-line" />
-            {renderFriendLink(friendLinkData)}
+            <div className="wrap-item-container">
+                {renderPrimary(menuData)}
+                <span className="home-line"/>
+                {renderChannel(channelData)}
+                <span className="home-line"/>
+                {renderFriendLink(friendLinkData)}
+            </div>
         </div>
     );
 }
