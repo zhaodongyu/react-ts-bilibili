@@ -4,7 +4,7 @@ import React from 'react';
 import Link from '../../../Link/Link';
 
 import {
-    NAVI_PAGE_DATA,
+    navi_page_data,
 } from './../../contants';
 
 // 展示导航的元素接口类型
@@ -32,7 +32,7 @@ const NaviPage: React.FC = () => {
 
     return (
         <ul className='nav-page-ul'>
-            {renderChildren(NAVI_PAGE_DATA)}
+            {renderChildren(navi_page_data)}
         </ul>
     )
 };

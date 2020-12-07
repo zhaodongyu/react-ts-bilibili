@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home/Home';
+import {BrowserRouter as Router} from 'react-router-dom';
+import routes from './routes/routes';
 
 // 引入scss样式
 import './styles/index.scss';
@@ -13,9 +14,11 @@ import HeaderAdv from './common/HeaderAdv/HeaderAdv'
 
 ReactDOM.render(
     <React.StrictMode>
-        <NavigationBar />
-        <HeaderAdv />
-        <Home />
+        <Router>
+            <NavigationBar />
+            <HeaderAdv />
+            {routes}
+        </Router>
     </React.StrictMode>,
     document.getElementById('root')
 );

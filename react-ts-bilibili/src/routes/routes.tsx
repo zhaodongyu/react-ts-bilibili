@@ -4,7 +4,6 @@ import Home from './../pages/Home/Home';
 
 export default(
     <div>
-        <Route  path='/' component={Home}>
-        </Route>
+        <Route exact path='/' component={Home} />
     </div>
 )

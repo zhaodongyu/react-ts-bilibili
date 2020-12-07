@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2020/12/6.
  */
-export const NAVI_PAGE_DATA = [
+export const navi_page_data = [
     {
         title: `主站`,
         link: `/home`
@@ -37,6 +37,3 @@ export const NAVI_PAGE_DATA = [
 ];
 
 
-
-// 图片url地址
-export const loginImgUrl = `https://static.hdslb.com/images/akari.jpg`;
