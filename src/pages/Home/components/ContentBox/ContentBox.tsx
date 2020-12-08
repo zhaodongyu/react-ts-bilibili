@@ -7,51 +7,51 @@ const contentData = {
         data: [
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
             {
                 title: `【宫崎骏】唯有童年与美食不可辜负`,
-                imgUrl: `213`
+                imgUrl: `http://localhost:3000/static/akari.jpg`
             },
 
         ],
@@ -66,13 +66,12 @@ const ContentBox: React.FC = () => {
     return (
         <div className="content-container">
             {
-                Object.keys(contentData).map((contentClass) =>{
+                Object.keys(contentData).map((contentClass, index) =>{
 
                     const {data} = contentData[contentClass];
                     return (
-                        <ContentList renderData={data} />
+                        <ContentList key={index} renderData={data} />
                     )
-
                 })
             }
             <RankList />
