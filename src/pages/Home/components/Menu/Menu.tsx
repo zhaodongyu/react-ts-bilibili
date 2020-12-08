@@ -5,19 +5,19 @@ import Link, {LinkTypeEnum} from '../../../../common/Link/Link';
 const menuData = [
     {
         title: `首页`,
-        img: require(`./../../../../static/package-secured.png`).default,
+        img: require(`../../../../static/package-secured.png`).default,
     },
     {
         title: `首页`,
-        img: require(`./../../../../static/package-secured.png`).default,
+        img: require(`../../../../static/package-secured.png`).default,
     },
     {
         title: `首页`,
-        img: require(`./../../../../static/package-secured.png`).default,
+        img: require(`../../../../static/package-secured.png`).default,
     },
     {
         title: `首页`,
-        img: require(`./../../../../static/package-secured.png`).default,
+        img: require(`../../../../static/package-secured.png`).default,
     },
 ];
 
@@ -107,27 +107,27 @@ const channelData = [
 const friendLinkData = [
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
     {
         title: `专栏`,
-        img: require(`./../../../../static/akari.jpg`).default,
+        img: require(`../../../../static/akari.jpg`).default,
     },
 ];
 

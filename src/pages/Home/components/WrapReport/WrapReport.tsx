@@ -3,48 +3,48 @@ import React from 'react';
 const recommendData = [
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
     {
         title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`./../../../../static/akari.jpg`).default
+        img: require(`../../../../static/akari.jpg`).default
     },
 ];
 
 // 轮播图背景图
-const carouselImg = require(`./../../../../static/akari.jpg`).default;
+const carouselImg = require(`../../../../static/akari.jpg`).default;
 
 interface recommendDataInterface {
     title: string;

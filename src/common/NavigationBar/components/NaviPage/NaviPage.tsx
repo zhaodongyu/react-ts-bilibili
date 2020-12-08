@@ -5,7 +5,7 @@ import Link from '../../../Link/Link';
 
 import {
     navi_page_data,
-} from './../../contants';
+} from '../../contants';
 
 // 展示导航的元素接口类型
 interface NaviPageItemProps {

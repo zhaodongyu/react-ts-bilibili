@@ -7,7 +7,7 @@ import Link from '../../../Link/Link';
 import Button from '../../../Button/Button';
 
 // 公共图片地址
-const loginImg = require(`./../../../../static/akari.jpg`);
+const loginImg = require(`../../../../static/akari.jpg`);
 
 const PersonalInfo: React.FC = () => {
 
