@@ -12,10 +12,13 @@ import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 const NavigationBar: FC = () => {
 
     return (
-        <div className="navigation">
-            <NaviPage />
-            <SearchBar />
-            <PersonalInfo />
+        <div>
+            <div className="navigation">
+                <NaviPage />
+                <SearchBar />
+                <PersonalInfo />
+            </div>
+            <div className="header-banner"></div>
         </div>
     )
 };

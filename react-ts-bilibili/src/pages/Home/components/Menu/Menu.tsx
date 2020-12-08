@@ -1,6 +1,6 @@
 import React from 'react';
 import IconButton from '../../../../common/IconButton/IconButton';
-import Link from '../../../../common/Link/Link';
+import Link, {LinkTypeEnum} from '../../../../common/Link/Link';
 
 const menuData = [
     {
@@ -131,32 +131,33 @@ const friendLinkData = [
     },
 ];
 
-interface primaryDataInterface{
+interface primaryDataInterface {
     title: string,
     img: any,
 }
 
-interface channelDataInterface{
+interface channelDataInterface {
     title: string,
     number: number,
 }
 
-interface friendLinkInterface{
+interface friendLinkInterface {
     title: string,
     img: any,
 }
-function Menu() {
+
+const Menu: React.FC = () => {
 
     // 渲染上方导航
     const renderPrimary = (menuData: Array<primaryDataInterface>) => {
         return (
             <ul className='primary-container'>
                 {
-                    menuData.map( (child, index) => {
-                        const { title, img } = child;
+                    menuData.map((child, index) => {
+                        const {title, img} = child;
                         return (
                             <li key={index}>
-                                <IconButton title={title} img={img} />
+                                <IconButton title={title} img={img}/>
                             </li>
                         )
                     })
@@ -167,31 +168,25 @@ function Menu() {
 
     // 渲染中间分区
     const renderChannel = (channelData: Array<channelDataInterface>) => {
-        return <div className="channel-container">{channelData.map( (child) => {
-            const { title, number } = child;
-
-            return (<span className="channel-tips">
-                {title}
-                <em>{number}</em>
-            </span>)
+        return <div className="channel-container">{channelData.map((child, index) => {
+            const {title, number} = child;
+            return (
+                <span className="channel-tips" key={index}>
+                    {title}
+                    <em>{number}</em>
+                </span>)
         })}</div>;
     };
 
     // 渲染右侧友情链家
     const renderFriendLink = (friendLinkData: Array<friendLinkInterface>) => {
         return <div className="friend-link-container">
-            {friendLinkData.map( (child) => {
+            {friendLinkData.map((child, index) => {
                 const {title, img} = child;
-                const imgWidth = '25px';
-                const imgHeight = '25px';
-                const fontColor = '#000';
                 return (
-                    <span className="friend-link-tips">
-                        <Link title={title}
+                    <span key={index} className="friend-link-tips">
+                        <Link title={title} linkType={LinkTypeEnum.Small}
                               img={img}
-                              imgWidth={imgWidth}
-                              imgHeight={imgHeight}
-                              fontColor={fontColor}
                         />
                     </span>
                 )
@@ -210,6 +205,6 @@ function Menu() {
             </div>
         </div>
     );
-}
+};
 
 export default Menu;

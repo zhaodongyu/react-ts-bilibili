@@ -1,17 +1,44 @@
-.link {
+// 尺寸大的类型sm
+$link-lg-width: 32px;
+$link-lg-height: 32px;
+$link-lg-color: #fff;
+
+// 尺寸小类型sm
+$link-sm-width: 25px;
+$link-sm-height: 25px;
+$link-sm-color: #000;
+
+.link-lg {
   font-size: 14px;
   display: flex;
   align-items: center;
   cursor: pointer;
   margin: 0 6px;
-  color: #fff;
-  img{
+  color: $link-lg-color;
+  img {
+    width: $link-lg-width;
+    height: $link-lg-height;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
   }
 }
 
-.link:hover{
+.link-sm {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 6px;
+  color: $link-sm-color;
+  img {
+    width: $link-sm-width;
+    height: $link-sm-height;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.link:hover {
   color: $hover-color;
 }

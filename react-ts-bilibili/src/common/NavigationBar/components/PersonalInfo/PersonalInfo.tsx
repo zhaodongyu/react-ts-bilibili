@@ -22,7 +22,7 @@ const PersonalInfo: React.FC = () => {
     const renderLogout = () => {
         return (
             <div className="personal-info">
-                <Link img={loginImg.default} title={titleLogin}/>
+                <Link img={loginImg.default} title={titleLogin} />
                 <Link title={titleRegister} />
                 <Button title={submit}  style={submitStyle as React.CSSProperties} />
             </div>
