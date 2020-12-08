@@ -7,13 +7,13 @@ export enum LinkTypeEnum {
 }
 
 interface LinkProps {
-    img?: any;
+    imgUrl?: string;
     title: string;
     linkType?: LinkTypeEnum;
 }
 
 const Link: React.FC<LinkProps> = (props) => {
-    const {img, title, linkType} = props;
+    const {imgUrl, title, linkType} = props;
 
     let classNames = `link link-${LinkTypeEnum.Large}`;
     if (linkType) {
@@ -22,7 +22,7 @@ const Link: React.FC<LinkProps> = (props) => {
 
     return (
         <span className={classNames}>
-            {img && <img src={img} alt={title}/>}
+            {imgUrl && <img src={imgUrl} alt={title}/>}
             {title}
         </span>
     )

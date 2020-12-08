@@ -5,19 +5,19 @@ import Link, {LinkTypeEnum} from '../../../../common/Link/Link';
 const menuData = [
     {
         title: `首页`,
-        img: require(`../../../../static/package-secured.png`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `首页`,
-        img: require(`../../../../static/package-secured.png`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `首页`,
-        img: require(`../../../../static/package-secured.png`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `首页`,
-        img: require(`../../../../static/package-secured.png`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
 ];
 
@@ -107,33 +107,33 @@ const channelData = [
 const friendLinkData = [
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
     {
         title: `专栏`,
-        img: require(`../../../../static/akari.jpg`).default,
+        imgUrl: `http://localhost:3000/static/akari.jpg`,
     },
 ];
 
 interface primaryDataInterface {
     title: string,
-    img: any,
+    imgUrl: any,
 }
 
 interface channelDataInterface {
@@ -143,7 +143,7 @@ interface channelDataInterface {
 
 interface friendLinkInterface {
     title: string,
-    img: any,
+    imgUrl: any,
 }
 
 const Menu: React.FC = () => {
@@ -154,10 +154,10 @@ const Menu: React.FC = () => {
             <ul className='primary-container'>
                 {
                     menuData.map((child, index) => {
-                        const {title, img} = child;
+                        const {title, imgUrl} = child;
                         return (
                             <li key={index}>
-                                <IconButton title={title} img={img}/>
+                                <IconButton title={title} imgUrl={imgUrl}/>
                             </li>
                         )
                     })
@@ -182,11 +182,11 @@ const Menu: React.FC = () => {
     const renderFriendLink = (friendLinkData: Array<friendLinkInterface>) => {
         return <div className="friend-link-container">
             {friendLinkData.map((child, index) => {
-                const {title, img} = child;
+                const {title, imgUrl} = child;
                 return (
                     <span key={index} className="friend-link-tips">
                         <Link title={title} linkType={LinkTypeEnum.Small}
-                              img={img}
+                              imgUrl={imgUrl}
                         />
                     </span>
                 )

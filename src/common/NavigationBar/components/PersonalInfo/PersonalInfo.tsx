@@ -7,7 +7,7 @@ import Link from '../../../Link/Link';
 import Button from '../../../Button/Button';
 
 // 公共图片地址
-const loginImg = require(`../../../../static/akari.jpg`);
+const loginImg = `http://localhost:3000/static/akari.jpg`;
 
 const PersonalInfo: React.FC = () => {
 
@@ -22,7 +22,7 @@ const PersonalInfo: React.FC = () => {
     const renderLogout = () => {
         return (
             <div className="personal-info">
-                <Link img={loginImg.default} title={titleLogin} />
+                <Link imgUrl={loginImg} title={titleLogin} />
                 <Link title={titleRegister} />
                 <Button title={submit}  style={submitStyle as React.CSSProperties} />
             </div>

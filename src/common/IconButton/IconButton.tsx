@@ -4,11 +4,11 @@ interface IconButtonProps{
     title: string;
     style?: React.CSSProperties;
     onClick?: () => void;
-    img: any;
+    imgUrl: string;
 }
 
 const Button: React.FC<IconButtonProps> = (props) => {
-    const {title, style, onClick, img} = props;
+    const {title, style, onClick, imgUrl} = props;
 
     const handleClick = () => {
 
@@ -21,7 +21,7 @@ const Button: React.FC<IconButtonProps> = (props) => {
     return (
         <div className='icon-button' style={style} onClick={handleClick}>
             <div className='icon-img-container'>
-                <img src={ img } alt={title} />
+                <img src={ imgUrl } alt={title} />
             </div>
             <span>{title}</span>
         </div>
