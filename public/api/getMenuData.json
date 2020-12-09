@@ -1,0 +1,134 @@
+{
+  "primary": {
+    "data": [
+      {
+        "title": "首页",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "首页",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "首页",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "首页",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      }
+    ]
+  },
+  "channel": {
+    "data": [
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      },
+      {
+        "title": "动画",
+        "number": 400
+      }
+    ]
+  },
+  "friend": {
+    "data": [
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      },
+      {
+        "title": "专栏",
+        "imgUrl": "http://localhost:3000/static/akari.jpg"
+      }
+    ]
+  }
+}

@@ -1,135 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import IconButton from '../../../../common/IconButton/IconButton';
 import Link, {LinkTypeEnum} from '../../../../common/Link/Link';
-
-const menuData = [
-    {
-        title: `首页`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `首页`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `首页`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `首页`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-];
-
-const channelData = [
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-    {
-        title: `动画`,
-        number: 400,
-    },
-];
-
-const friendLinkData = [
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-    {
-        title: `专栏`,
-        imgUrl: `http://localhost:3000/static/akari.jpg`,
-    },
-];
+import {getMenuData} from './../../api';
 
 interface primaryDataInterface {
     title: string,
@@ -148,10 +20,23 @@ interface friendLinkInterface {
 
 const Menu: React.FC = () => {
 
+    const [primaryData, setPrimaryData] = useState([]);
+    const [channelData, setChannelData] = useState([]);
+    const [friendData, setFriendData] = useState([]);
+
+    useEffect(() => {
+        getMenuData().then((res) => {
+            const {data} = res;
+            setPrimaryData(data.primary);
+            setChannelData(data.channel);
+            setFriendData(data.friend);
+        })
+    }, ["primaryData", "channelData", "friendData"]);
+
     // 渲染上方导航
     const renderPrimary = (menuData: Array<primaryDataInterface>) => {
         return (
-            <ul className='primary-container'>
+            menuData.length > 0 && <ul className='primary-container'>
                 {
                     menuData.map((child, index) => {
                         const {title, imgUrl} = child;
@@ -168,20 +53,21 @@ const Menu: React.FC = () => {
 
     // 渲染中间分区
     const renderChannel = (channelData: Array<channelDataInterface>) => {
-        return <div className="channel-container">{channelData.map((child, index) => {
-            const {title, number} = child;
-            return (
-                <span className="channel-tips" key={index}>
+        return <div className="channel-container">{
+            channelData.length > 0 && channelData.map((child, index) => {
+                const {title, number} = child;
+                return (
+                    <span className="channel-tips" key={index}>
                     {title}
-                    <em>{number}</em>
+                        <em>{number}</em>
                 </span>)
-        })}</div>;
+            })}</div>;
     };
 
     // 渲染右侧友情链家
     const renderFriendLink = (friendLinkData: Array<friendLinkInterface>) => {
         return <div className="friend-link-container">
-            {friendLinkData.map((child, index) => {
+            {friendLinkData.length > 0 && friendLinkData.map((child, index) => {
                 const {title, imgUrl} = child;
                 return (
                     <span key={index} className="friend-link-tips">
@@ -197,11 +83,11 @@ const Menu: React.FC = () => {
     return (
         <div className="wrap-container">
             <div className="wrap-item-container">
-                {renderPrimary(menuData)}
+                {renderPrimary(primaryData)}
                 <span className="home-line"/>
                 {renderChannel(channelData)}
                 <span className="home-line"/>
-                {renderFriendLink(friendLinkData)}
+                {renderFriendLink(friendData)}
             </div>
         </div>
     );
