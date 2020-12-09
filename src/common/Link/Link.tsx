@@ -3,7 +3,8 @@ import React from 'react';
 // 连接类型
 export enum LinkTypeEnum {
     Large = `lg`,
-    Small = `sm`
+    Small = `sm`,
+    Medium = `med`
 }
 
 interface LinkProps {

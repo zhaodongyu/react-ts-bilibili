@@ -4,7 +4,5 @@
 import axios from 'axios';
 
 export const getContentData = () => {
-    return axios.get("/api/getContentData.json").then((res) => {
-        console.log(res);
-    })
+    return axios.get("/api/getContentData.json").then((res) => ({data: res.data}));
 };
