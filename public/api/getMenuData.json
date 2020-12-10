@@ -1,134 +1,128 @@
 {
-  "primary": {
-    "data": [
-      {
-        "title": "首页",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "首页",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "首页",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "首页",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      }
-    ]
-  },
-  "channel": {
-    "data": [
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      },
-      {
-        "title": "动画",
-        "number": 400
-      }
-    ]
-  },
-  "friend": {
-    "data": [
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      },
-      {
-        "title": "专栏",
-        "imgUrl": "http://localhost:3000/static/akari.jpg"
-      }
-    ]
-  }
+  "primary": [
+    {
+      "title": "首页",
+      "imgUrl": "http://localhost:3000/static/pr1.jpg"
+    },
+    {
+      "title": "动态",
+      "imgUrl": "http://localhost:3000/static/pr2.jpg"
+    },
+    {
+      "title": "热门",
+      "imgUrl": "http://localhost:3000/static/pr3.jpg"
+    },
+    {
+      "title": "频道",
+      "imgUrl": "http://localhost:3000/static/pr4.jpg"
+    }
+  ],
+  "channel": [
+    {
+      "title": "动画",
+      "number": 989
+    },
+    {
+      "title": "音乐",
+      "number": 154
+    },
+    {
+      "title": "舞蹈",
+      "number": 321
+    },
+    {
+      "title": "知识",
+      "number": 512
+    },
+    {
+      "title": "生活",
+      "number": 22
+    },
+    {
+      "title": "时尚",
+      "number": 67
+    },
+    {
+      "title": "娱乐",
+      "number": 997
+    },
+    {
+      "title": "放映厅",
+      "number": 452
+    },
+    {
+      "title": "动物圈",
+      "number": 234
+    },
+    {
+      "title": "单机游戏",
+      "number": 672
+    },
+    {
+      "title": "番剧",
+      "number": 213
+    },
+    {
+      "title": "国创",
+      "number": 459
+    },
+    {
+      "title": "游戏",
+      "number": 762
+    },
+    {
+      "title": "数码",
+      "number": 841
+    },
+    {
+      "title": "鬼畜",
+      "number": 121
+    },
+    {
+      "title": "咨询",
+      "number": 461
+    },
+    {
+      "title": "影视",
+      "number": 289
+    },
+    {
+      "title": "高校",
+      "number": 512
+    },
+    {
+      "title": "美食",
+      "number": 321
+    },
+    {
+      "title": "VLOG",
+      "number": 721
+    }
+  ],
+  "friend": [
+    {
+      "title": "专栏",
+      "imgUrl": "http://localhost:3000/static/zl1.jpg"
+    },
+    {
+      "title": "活动",
+      "imgUrl": "http://localhost:3000/static/zl2.jpg"
+    },
+    {
+      "title": "小黑屋",
+      "imgUrl": "http://localhost:3000/static/zl3.jpg"
+    },
+    {
+      "title": "直播",
+      "imgUrl": "http://localhost:3000/static/zl4.jpg"
+    },
+    {
+      "title": "课堂",
+      "imgUrl": "http://localhost:3000/static/zl5.jpg"
+    },
+    {
+      "title": "音乐",
+      "imgUrl": "http://localhost:3000/static/zl6.jpg"
+    }
+  ]
 }

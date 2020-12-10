@@ -1,42 +1,32 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import IconButton from '../../../../common/IconButton/IconButton';
 import Link, {LinkTypeEnum} from '../../../../common/Link/Link';
-import {getMenuData} from './../../api';
+import {HomeContext} from '../../Home';
 
-interface primaryDataInterface {
+interface PrimaryDataInterface {
     title: string,
-    imgUrl: any,
+    imgUrl: string,
 }
 
-interface channelDataInterface {
+interface ChannelDataInterface {
     title: string,
     number: number,
 }
 
-interface friendLinkInterface {
+interface FriendLinkInterface {
     title: string,
-    imgUrl: any,
+    imgUrl: string,
 }
 
 const Menu: React.FC = () => {
 
-    const [primaryData, setPrimaryData] = useState([]);
-    const [channelData, setChannelData] = useState([]);
-    const [friendData, setFriendData] = useState([]);
+// 共享数据
+    const {menuData} = useContext(HomeContext);
 
-    useEffect(() => {
-        getMenuData().then((res) => {
-            const {data} = res;
-            setPrimaryData(data.primary);
-            setChannelData(data.channel);
-            setFriendData(data.friend);
-        })
-    }, ["primaryData", "channelData", "friendData"]);
-
-    // 渲染上方导航
-    const renderPrimary = (menuData: Array<primaryDataInterface>) => {
+// 渲染上方导航
+    const renderPrimary = (menuData: Array<PrimaryDataInterface>) => {
         return (
-            menuData.length > 0 && <ul className='primary-container'>
+            <ul className='primary-container'>
                 {
                     menuData.map((child, index) => {
                         const {title, imgUrl} = child;
@@ -51,30 +41,30 @@ const Menu: React.FC = () => {
         )
     };
 
-    // 渲染中间分区
-    const renderChannel = (channelData: Array<channelDataInterface>) => {
+// 渲染中间分区
+    const renderChannel = (channelData: Array<ChannelDataInterface>) => {
         return <div className="channel-container">{
-            channelData.length > 0 && channelData.map((child, index) => {
+            channelData.map((child, index) => {
                 const {title, number} = child;
                 return (
                     <span className="channel-tips" key={index}>
-                    {title}
+{title}
                         <em>{number}</em>
-                </span>)
+</span>)
             })}</div>;
     };
 
-    // 渲染右侧友情链家
-    const renderFriendLink = (friendLinkData: Array<friendLinkInterface>) => {
-        return <div className="friend-link-container">
-            {friendLinkData.length > 0 && friendLinkData.map((child, index) => {
+// 渲染右侧友情链家
+    const renderFriendLink = (friendLinkData: Array<FriendLinkInterface>) => {
+        return <div className="friend-link-container">{
+            friendLinkData.map((child, index) => {
                 const {title, imgUrl} = child;
                 return (
                     <span key={index} className="friend-link-tips">
-                        <Link title={title} linkType={LinkTypeEnum.Small}
-                              imgUrl={imgUrl}
-                        />
-                    </span>
+<Link title={title} linkType={LinkTypeEnum.Small}
+      imgUrl={imgUrl}
+/>
+</span>
                 )
             })}
         </div>
@@ -83,11 +73,11 @@ const Menu: React.FC = () => {
     return (
         <div className="wrap-container">
             <div className="wrap-item-container">
-                {renderPrimary(primaryData)}
+                {renderPrimary(menuData.primary)}
                 <span className="home-line"/>
-                {renderChannel(channelData)}
+                {renderChannel(menuData.channel)}
                 <span className="home-line"/>
-                {renderFriendLink(friendData)}
+                {renderFriendLink(menuData.friend)}
             </div>
         </div>
     );

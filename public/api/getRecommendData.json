@@ -1,0 +1,45 @@
+{
+  "recommendData": [
+    {
+      "title": "赛博朋克终极视觉指南！【游戏众生相Remake",
+      "img": "http://localhost:3000/static/recommend1.jpg"
+    },
+    {
+      "title": "《ANI纯爱组》03 决战！野生大岩",
+      "img": "http://localhost:3000/static/recommend2.jpg"
+    },
+    {
+      "title": "是谁强奸了我们的审美？从《镖人》来看这个越来越软的时",
+      "img": "http://localhost:3000/static/recommend3.jpg"
+    },
+    {
+      "title": "点击收看鼎级养生大师长寿秘诀【元气森林测评",
+      "img": "http://localhost:3000/static/recommend4.jpg"
+    },
+    {
+      "title": "【1900】我们正在准备散伙饭《是，大臣》（05/S1E5）",
+      "img": "http://localhost:3000/static/recommend5.jpg"
+    },
+    {
+      "title": "这家酸菜涮羊肉，竟让UP主短短3年变成这样？",
+      "img": "http://localhost:3000/static/recommend6.jpg"
+    },
+    {
+      "title": "一个贫困县的20年：珍贵的不是丁真，而是理塘的坚持和等待【暗中观察074】IC实验室",
+      "img": "http://localhost:3000/static/recommend7.jpg"
+    },
+    {
+      "title": "入坑当UP主有前途吗？一年涨粉140万我是怎么做的。",
+      "img": "http://localhost:3000/static/recommend8.jpg"
+    },
+    {
+      "title": "【21世纪1000部动画回顾-预告】辞去已无年少日 羁绊永结少年心",
+      "img": "http://localhost:3000/static/recommend9.jpg"
+    },
+    {
+      "title": "中国朋友看完这8大荷兰必吃小吃，竟然有人说不饿？！我哭了...",
+      "img": "http://localhost:3000/static/recommend10.jpg"
+    }
+  ],
+  "carouselImg": "http://localhost:3000/static/carouselImg.jpg"
+}

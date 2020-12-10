@@ -1,13 +1,13 @@
 import React from 'react';
 import Link, {LinkTypeEnum} from './../../../../../common/Link/Link';
 
-interface renderItemInterface {
+interface RenderItemInterface {
     title: string;
     imgUrl: string;
 }
 
 interface renderDataProps {
-    renderData: Array<renderItemInterface>
+    renderData: Array<RenderItemInterface>
     imgUrl: string;
     title: string;
 }

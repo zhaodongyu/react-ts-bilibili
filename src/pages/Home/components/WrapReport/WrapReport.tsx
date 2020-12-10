@@ -1,57 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {HomeContext} from '../../Home';
 
-const recommendData = [
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-    {
-        title: `【明日方舟】同人动画Just Believe you`,
-        img: require(`../../../../static/akari.jpg`).default
-    },
-];
-
-// 轮播图背景图
-const carouselImg = require(`../../../../static/akari.jpg`).default;
-
-interface recommendDataInterface {
+interface RecommendDataInterface {
     title: string;
-    img: any;
+    img: string;
 }
 
 const WrapReport: React.FC = () => {
+
+// 获取Context中的数据
+    const {recommendData} = useContext(HomeContext);
+    const {carouselImg, recommendData: renderData} = recommendData;
 
 // 渲染轮播图
     const renderCarousel = () => {
@@ -64,7 +23,7 @@ const WrapReport: React.FC = () => {
     };
 
 // 渲染推荐
-    const renderRecommend = (recommendData: Array<recommendDataInterface>) => {
+    const renderRecommend = (recommendData: Array<RecommendDataInterface>) => {
         return (
             <div className="recommend-container">
                 {
@@ -87,7 +46,7 @@ const WrapReport: React.FC = () => {
     return (
         <div className="wrap-report-container">
             {renderCarousel()}
-            {renderRecommend(recommendData)}
+            {renderRecommend(renderData)}
         </div>
     );
 };

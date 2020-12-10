@@ -8,7 +8,7 @@ const RankList: React.FC<rankProps> = (props) => {
     const { imgUrl } = props;
     return (
         <div className="rank-list" style={{
-            background: `center / contain no-repeat url(${imgUrl})`
+            background: `url(${imgUrl}) 0% 0% / 100% 100% no-repeat`,
         }}>
         </div>
     )

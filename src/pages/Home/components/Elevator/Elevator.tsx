@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import {ContentContext} from './../../Home';
+import {HomeContext} from './../../Home';
 
 const Elevator: React.FC = () => {
 
-    const contentData = useContext(ContentContext);
+    const {contentData} = useContext(HomeContext);
     const list: Array<string> = [];
     const idList: Array<string> = [];
 

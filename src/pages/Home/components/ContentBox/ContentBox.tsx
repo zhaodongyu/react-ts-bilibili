@@ -3,13 +3,12 @@ import ContentList from './ContentList/ContentList';
 import RankList from './RankList/RankList';
 import Elevator from './../Elevator/Elevator';
 
-import {ContentContext} from './../../Home';
+import {HomeContext} from '../../Home';
 
 const ContentBox: React.FC = () => {
 
     // 获取Context中的数据
-    const contentData = useContext(ContentContext);
-
+    const {contentData} = useContext(HomeContext);
 
     const renderContent = () => {
         return Object.keys(contentData).map((contentClass, index) => {

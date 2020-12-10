@@ -13,7 +13,6 @@ interface NaviPageItemProps {
     link: string,
 }
 
-
 const NaviPage: React.FC = () => {
 
     // 根据数据渲染子元素
@@ -22,7 +21,7 @@ const NaviPage: React.FC = () => {
             const {title, link} = child;
             return (
                 <li key={index} className='nav-page-item'>
-                    <a href={link}>
+                    <a href={link} onClick={(e) => e.preventDefault()}>
                         <Link title={title} />
                     </a>
                 </li>
@@ -36,6 +35,5 @@ const NaviPage: React.FC = () => {
         </ul>
     )
 };
-
 
 export default NaviPage;
