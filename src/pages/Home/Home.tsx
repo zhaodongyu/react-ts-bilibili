@@ -48,7 +48,9 @@ const Home: React.FC = () => {
     const [renderData, setRenderData] = useState(defaultRenderData);
 
     useEffect(() => {
+
         const [indexContentData, indexMenuData, indexRecommendData] = [0, 1, 2];
+
         Promise.all([getContentData(), getMenuData(), getRecommendData()]).then( (resList) => {
 
             setRenderData({
@@ -72,6 +74,6 @@ const Home: React.FC = () => {
             </HomeContext.Provider>
         </div>
     );
-}
+};
 
 export default Home;

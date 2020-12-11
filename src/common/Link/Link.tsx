@@ -11,10 +11,20 @@ interface LinkProps {
     imgUrl?: string;
     title: string;
     linkType?: LinkTypeEnum;
+    onClick?: () => void;
 }
 
 const Link: React.FC<LinkProps> = (props) => {
-    const {imgUrl, title, linkType} = props;
+
+    const {imgUrl, title, linkType, onClick} = props;
+
+    const handleClick = () => {
+
+        // 点击事件
+        if (onClick) {
+            onClick();
+        }
+    };
 
     let classNames = `link link-${LinkTypeEnum.Large}`;
     if (linkType) {
@@ -22,7 +32,7 @@ const Link: React.FC<LinkProps> = (props) => {
     }
 
     return (
-        <span className={classNames}>
+        <span className={classNames} onClick={handleClick}>
             {imgUrl && <img src={imgUrl} alt={title}/>}
             {title}
         </span>

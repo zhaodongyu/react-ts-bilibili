@@ -3,14 +3,17 @@
 // 修改默认
 @import 'reboot';
 // 导航样式
-@import '../common/NavigationBar/_style';
+@import '../common/NavigationBar/style';
 // 公共连接组件
-@import '../common/Link/_style';
+@import '../common/Link/style';
 // 公共按钮组件
-@import '../common/Button/_style';
+@import '../common/Button/style';
 
 // 公共icon按钮
-@import '../common/IconButton/_style';
+@import '../common/IconButton/style';
 
-// 首页wrapper样式
-@import '../pages/Home/_style';
+// 首页样式
+@import '../pages/Home/style';
+
+// 登陆页面
+@import '../pages/Login/style';

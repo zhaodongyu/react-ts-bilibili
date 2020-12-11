@@ -43,30 +43,38 @@ const Menu: React.FC = () => {
 
 // 渲染中间分区
     const renderChannel = (channelData: Array<ChannelDataInterface>) => {
-        return <div className="channel-container">{
-            channelData.map((child, index) => {
-                const {title, number} = child;
-                return (
-                    <span className="channel-tips" key={index}>
-{title}
-                        <em>{number}</em>
-</span>)
-            })}</div>;
+        return (
+            <div className="channel-container">
+                {
+                    channelData.map((child, index) => {
+                        const {title, number} = child;
+                        return (
+                            <span className="channel-tips" key={index}>
+                                {title}
+                                <em>{number}</em>
+                            </span>
+                        )
+                    })
+                }
+            </div>
+        );
     };
 
 // 渲染右侧友情链家
     const renderFriendLink = (friendLinkData: Array<FriendLinkInterface>) => {
-        return <div className="friend-link-container">{
-            friendLinkData.map((child, index) => {
-                const {title, imgUrl} = child;
-                return (
-                    <span key={index} className="friend-link-tips">
-<Link title={title} linkType={LinkTypeEnum.Small}
-      imgUrl={imgUrl}
-/>
-</span>
-                )
-            })}
+        return <div className="friend-link-container">
+            {
+                friendLinkData.map((child, index) => {
+                    const {title, imgUrl} = child;
+                    return (
+                        <span key={index} className="friend-link-tips">
+                            <Link title={title} linkType={LinkTypeEnum.Small}
+                                imgUrl={imgUrl}
+                            />
+                        </span>
+                    )
+                })
+            }
         </div>
     };
 
