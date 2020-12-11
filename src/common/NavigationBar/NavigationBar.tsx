@@ -1,4 +1,5 @@
-import React, { FC }from 'react';
+import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 // 左侧导航栏组件
 import NaviPage from './components/NaviPage/NaviPage'
@@ -9,7 +10,18 @@ import SearchBar from './components/SearchBar/SearchBar';
 // 右侧个人中心
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 
-const NavigationBar: FC = () => {
+interface HistoryProps {
+    history: any;
+}
+
+const NavigationBar: React.FC<HistoryProps> = (props) => {
+
+    const {history} = props;
+    if(history.location.pathname === `/noPage`){
+        return (
+            <div />
+        )
+    }
 
     return (
         <div>
@@ -24,4 +36,4 @@ const NavigationBar: FC = () => {
 };
 
 
-export default NavigationBar;
+export default withRouter(NavigationBar);
