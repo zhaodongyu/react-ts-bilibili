@@ -11,9 +11,9 @@ interface LoginInterface{
     result: string
 }
 
-const Login: React.FC = (props) => {
+const Login: React.FC<HistoryProps> = (props) => {
 
-    const {history} = (props as HistoryProps);
+    const {history} = props;
 
     // 用户名
     const [username, setUsername] = useState(``);
