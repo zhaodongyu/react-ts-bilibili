@@ -3,6 +3,8 @@ import React from 'react';
 // 公共图片按钮组件
 import Link from '../../../Link/Link';
 
+import {Link as RouterLink} from 'react-router-dom';
+
 // 公共按钮
 import Button from '../../../Button/Button';
 
@@ -20,20 +22,19 @@ const PersonalInfo: React.FC = (props) => {
         background: `#FB7299`,
     };
 
-    const handleClick = () => {
-        console.log(123);
-    };
 
     const renderLogout = () => {
         return (
             <div className="personal-info">
-                <Link imgUrl={loginImg} title={titleLogin}
-                      onClick={handleClick}
-                />
-                <Link title={titleRegister} />
+                <RouterLink to="/login">
+                    <Link imgUrl={loginImg} title={titleLogin}
+                    />
+                </RouterLink>
+
+                <Link title={titleRegister}/>
                 <Button title={submit}
                         style={submitStyle as React.CSSProperties}
-                        />
+                />
             </div>
         )
     };

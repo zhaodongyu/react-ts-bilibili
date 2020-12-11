@@ -1,11 +1,51 @@
-import React from 'react';
-import Button from "../../common/Button/Button";
+import React, {useState} from 'react';
+import Button from '../../common/Button/Button';
+import {withRouter} from 'react-router-dom';
+import {login} from './api'
 
-const Login: React.FC = () => {
+interface HistoryProps {
+    history: any;
+}
 
-    const handleClick = () => {
+interface LoginInterface{
+    result: string
+}
 
-        console.log(123);
+const Login: React.FC = (props) => {
+
+    const {history} = (props as HistoryProps);
+
+    // 用户名
+    const [username, setUsername] = useState(``);
+    const [password, setPassword] = useState(``);
+
+
+    // 输入登陆信息
+    const onChangeUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUsername(e.target.value)
+    };
+
+    const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value)
+    };
+
+    const loginClick = () => {
+
+        const loginData = {
+            username: username,
+            password: password
+        };
+
+        login(loginData).then( (res: any) => {
+            const loginResult: LoginInterface = res.data;
+
+            if (loginResult.result === "success") {
+                history.push("/");
+            }else{
+                console.log(`login failed!`);
+            }
+
+        });
 
     };
 
@@ -15,23 +55,23 @@ const Login: React.FC = () => {
                 <div className="login-form-item">
                     <div>用户名：</div>
                     <div className="login-form-input-container">
-                        <input type="text"/>
+                        <input type="text" onChange={onChangeUsername}/>
                     </div>
                 </div>
                 <div className="login-form-item">
                     <div>密码：</div>
                     <div className="login-form-input-container">
-                        <input type="password"/>
+                        <form>
+                            <input type="password" onChange={onChangePassword} autoComplete="" />
+                        </form>
                     </div>
                 </div>
                 <div className="login-btn-container">
-                    <Button title='登录' onClick={() => {
-                        handleClick()
-                    }}/>
+                    <Button title='登录' onClick={loginClick}/>
                 </div>
             </div>
         </div>
     )
 };
 
-export default Login;
+export default withRouter(Login);
