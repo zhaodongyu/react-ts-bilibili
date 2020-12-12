@@ -1,5 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react';
 import {getContentData, getMenuData, getRecommendData} from "./api";
+import {connect} from 'react-redux';
 
 // 上方菜单
 import Menu from './components/Menu/Menu';
@@ -9,6 +10,10 @@ import WrapReport from './components/WrapReport/WrapReport';
 
 // 下方内容
 import ContentBox from './components/ContentBox/ContentBox';
+
+interface HomeProps {
+    isLogin: boolean
+}
 
 interface MenuDataInterface {
     primary: Array<any>;
@@ -25,6 +30,7 @@ interface IHomeContext {
     contentData: object;
     menuData: MenuDataInterface;
     recommendData: RecommendDataInterface;
+    isLogin: boolean
 }
 
 const defaultRenderData = {
@@ -38,12 +44,14 @@ const defaultRenderData = {
         recommendData: [],
         carouselImg: "",
     },
+    isLogin: false,
 };
 
 export const HomeContext = createContext<IHomeContext>(defaultRenderData);
 
 
-const Home: React.FC = () => {
+const Home: React.FC<HomeProps> = (props) => {
+    const {isLogin} = props;
 
     const [renderData, setRenderData] = useState(defaultRenderData);
 
@@ -57,13 +65,14 @@ const Home: React.FC = () => {
                 contentData: (resList[indexContentData] as any).data,
                 menuData: (resList[indexMenuData] as any).data,
                 recommendData: (resList[indexRecommendData] as any).data,
+                isLogin,
             })
 
         }).catch( () => {
             console.error(`get render data error`);
         });
 
-    }, []);
+    }, [isLogin]);
 
     return (
         <div className="home-container">
@@ -76,4 +85,10 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+const mapStateToProps = (state: any) => {
+    return {
+        isLogin: state.login.isLogin
+    }
+};
+
+export default connect(mapStateToProps, null)(Home);

@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import Button from '../../common/Button/Button';
 import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
 import {login} from './api'
+import {actionCreators} from './store';
+
 
 interface HistoryProps {
     history: any;
+    loginSuccess: Function
 }
 
 interface LoginInterface{
@@ -13,7 +17,7 @@ interface LoginInterface{
 
 const Login: React.FC<HistoryProps> = (props) => {
 
-    const {history} = props;
+    const {history, loginSuccess} = props;
 
     // 用户名
     const [username, setUsername] = useState(``);
@@ -40,6 +44,7 @@ const Login: React.FC<HistoryProps> = (props) => {
             const loginResult: LoginInterface = res.data;
 
             if (loginResult.result === "success") {
+                loginSuccess();
                 history.push("/");
             }else{
                 console.log(`login failed!`);
@@ -74,4 +79,18 @@ const Login: React.FC<HistoryProps> = (props) => {
     )
 };
 
-export default withRouter(Login);
+const mapStateToProps = (state: any) => {
+    return {
+        isLogin: state.login.isLogin
+    }
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        loginSuccess: () => {
+            dispatch(actionCreators.loginSuccess());
+        }
+    }
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

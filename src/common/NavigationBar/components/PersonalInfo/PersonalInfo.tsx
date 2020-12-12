@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 // 公共图片按钮组件
 import Link from '../../../Link/Link';
@@ -11,10 +12,16 @@ import Button from '../../../Button/Button';
 // 公共图片地址
 const loginImg = `http://localhost:3000/static/akari.jpg`;
 
+interface PersonalInfoProps{
+    isLogin: boolean
+}
+
 const PersonalInfo: React.FC = (props) => {
 
+    const {isLogin} = (props as PersonalInfoProps);
 
     const titleLogin = `登录`;
+    const titleLogout = `退出`;
     const titleRegister = `注册`;
     const submit = `投稿`;
     const submitStyle = {
@@ -23,9 +30,27 @@ const PersonalInfo: React.FC = (props) => {
     };
 
 
-    const renderLogout = () => {
+    const renderLogin = () => {
+
+        if(isLogin){
+            return (
+                <div className="personal-info">
+
+                    <RouterLink to="/loginout">
+                        <Link imgUrl={loginImg} title={titleLogout}
+                        />
+                    </RouterLink>
+
+                    <Button title={submit}
+                            style={submitStyle as React.CSSProperties}
+                    />
+                </div>
+            )
+        }
+
         return (
             <div className="personal-info">
+
                 <RouterLink to="/login">
                     <Link imgUrl={loginImg} title={titleLogin}
                     />
@@ -39,8 +64,15 @@ const PersonalInfo: React.FC = (props) => {
         )
     };
     return (
-        renderLogout()
+        renderLogin()
     );
 };
 
-export default PersonalInfo;
+
+const mapStateToProps = (state: any) => {
+    return {
+        isLogin: state.login.isLogin
+    }
+};
+
+export default connect(mapStateToProps, null)(PersonalInfo);
