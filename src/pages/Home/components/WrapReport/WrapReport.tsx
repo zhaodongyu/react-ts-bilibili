@@ -31,7 +31,7 @@ const WrapReport: React.FC = () => {
                         const {img, title} = child;
                         return (
                             <div key={index} className="recommend-item" style={{
-                                background: `center / contain no-repeat url(${img})`
+                                background: `url(${img}) 0% 0% / 100% 100% no-repeat`
                             }}>
                                 <div className="recommend-item-title">
                                     {title}
