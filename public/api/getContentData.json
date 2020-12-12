@@ -2,7 +2,7 @@
   "anime": {
     "data": [
       {
-        "title": "文豪野犬粉看完这视频后都想打死up主 搞笑解说《文豪野犬》",
+        "title": "文豪野犬粉看完这视频后都想打死up主",
         "imgUrl": "http://localhost:3000/static/anime1.jpg"
       },
       {
@@ -26,11 +26,11 @@
         "imgUrl": "http://localhost:3000/static/anime6.jpg"
       },
       {
-        "title": "【七分熟切片】单推纯爱？DD牛头人？冲国观众喜欢牛头人",
+        "title": "【七分熟切片】单推纯爱？DD牛头人？",
         "imgUrl": "http://localhost:3000/static/anime7.jpg"
       },
       {
-        "title": "“如果连吸血鬼都逃跑了，那还由谁来战斗！！”",
+        "title": "“如果连吸血鬼都逃跑了",
         "imgUrl": "http://localhost:3000/static/anime8.jpg"
       },
       {
@@ -46,7 +46,7 @@
         "imgUrl": "http://localhost:3000/static/anime11.jpg"
       },
       {
-        "title": "【求助/水滴筹】有想要守护的东西，光就一定存在",
+        "title": "【求助/水滴筹】有想要守护的东西",
         "imgUrl": "http://localhost:3000/static/anime12.jpg"
       }
     ],
@@ -84,11 +84,11 @@
         "imgUrl": "http://localhost:3000/static/music7.jpg"
       },
       {
-        "title": "时代少年团《晴雅集》（电影《晴雅集》同名宣传推广曲）",
+        "title": "时代少年团《晴雅集》",
         "imgUrl": "http://localhost:3000/static/music8.jpg"
       },
       {
-        "title": "【盛樂】張敬軒X中樂團演唱會網上70分鐘網上精華版（閹割版）",
+        "title": "【盛樂】張敬軒X中樂團演唱會網上70分",
         "imgUrl": "http://localhost:3000/static/music9.jpg"
       },
       {
@@ -96,7 +96,7 @@
         "imgUrl": "http://localhost:3000/static/music10.jpg"
       },
       {
-        "title": "【以你的心诠释我的爱】四分钟速学《无法诠释》by Billkin",
+        "title": "【以你的心诠释我的爱】四分钟速学",
         "imgUrl": "http://localhost:3000/static/music11.jpg"
       },
       {
@@ -110,7 +110,7 @@
   "game": {
     "data": [
       {
-        "title": "【英雄联盟】2020LPL全明星周末主题曲《挺身而出》（选手版）MV",
+        "title": "【英雄联盟】2020LPL全明星周末主题曲",
         "imgUrl": "http://localhost:3000/static/game1.jpg"
       },
       {
@@ -134,7 +134,7 @@
         "imgUrl": "http://localhost:3000/static/game6.jpg"
       },
       {
-        "title": "“现在的刺客信条越来越狂战化，哪还有以前内味儿啊？”——【皮影戏#04】",
+        "title": "“现在的刺客信条越来越狂战化",
         "imgUrl": "http://localhost:3000/static/game7.jpg"
       },
       {
@@ -146,7 +146,7 @@
         "imgUrl": "http://localhost:3000/static/game9.jpg"
       },
       {
-        "title": "【原神】到底是颜神还是岩神？钟离主C/辅助输出手法攻略",
+        "title": "【原神】到底是颜神还是岩神？",
         "imgUrl": "http://localhost:3000/static/game10.jpg"
       },
       {

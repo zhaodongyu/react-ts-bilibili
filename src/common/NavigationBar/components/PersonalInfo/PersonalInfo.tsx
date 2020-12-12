@@ -12,7 +12,7 @@ import Button from '../../../Button/Button';
 // 公共图片地址
 const loginImg = `http://localhost:3000/static/akari.jpg`;
 
-interface PersonalInfoProps{
+interface PersonalInfoProps {
     isLogin: boolean
 }
 
@@ -32,14 +32,13 @@ const PersonalInfo: React.FC = (props) => {
 
     const renderLogin = () => {
 
-        if(isLogin){
+        if (isLogin) {
             return (
                 <div className="personal-info">
 
-                    <RouterLink to="/loginout">
-                        <Link imgUrl={loginImg} title={titleLogout}
-                        />
-                    </RouterLink>
+                    <Link imgUrl={loginImg} title={titleLogout}
+                    />
+
 
                     <Button title={submit}
                             style={submitStyle as React.CSSProperties}

@@ -1,6 +1,8 @@
+$icon-button-width: 40px;
+
 .icon-button {
   cursor: pointer;
-  width: 66px;
+  width: $icon-button-width;
   height: 68px;
   text-align: center;
   font-size: 14px;

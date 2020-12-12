@@ -1,4 +1,9 @@
-$home-container-width: 1630px;
+$home-container-width: 1100px;
+$friend-link-width: 220px;
+$carousel-width: 368px;
+$recommend-container-width: 716px;
+$content-item-container-width: 138px;
+$content-list-container-width: 840px;
 
 .home-container {
   width: $home-container-width;
@@ -54,7 +59,7 @@ $home-container-width: 1630px;
     flex-direction: column;
     flex-wrap: wrap;
     height: 68px;
-    width: 289px;
+    width: $friend-link-width;
 
     .friend-link-tips {
       height: 34px;
@@ -65,7 +70,7 @@ $home-container-width: 1630px;
     display: inline-block;
     height: 58px;
     border-left: 1px solid #e7e7e7;
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .wrap-report-container {
@@ -73,14 +78,14 @@ $home-container-width: 1630px;
     justify-content: space-between;
 
     .carousel-container {
-      width: 550px;
+      width: $carousel-width;
       height: 242px;
       overflow: hidden;
     }
 
     .recommend-container {
       display: flex;
-      width: 1070px;
+      width: $recommend-container-width;
       height: 242px;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -88,7 +93,7 @@ $home-container-width: 1630px;
 
       .recommend-item {
         color: #fff;
-        width: 206px;
+        width: 137px;
         height: 116px;
         position: relative;
         overflow: hidden;
@@ -203,7 +208,7 @@ $home-container-width: 1630px;
   margin-bottom: 15px;
   .content-list-container {
     margin-top: 10px;
-    width: 1286px;
+    width: $content-list-container-width;
     height: 380px;
     cursor: pointer;
     justify-content: space-between;
@@ -211,7 +216,8 @@ $home-container-width: 1630px;
     align-content: space-between;
     flex-wrap: wrap;
     .content-item-container {
-      width: 206px;
+      margin-bottom: 10px;
+      width: $content-item-container-width;
       .content-img-container {
         position: relative;
         width: 100%;
@@ -229,8 +235,8 @@ $home-container-width: 1630px;
   }
   // 排名
   .rank-list{
-    margin-top: 40px;
-    width: 320px;
+    margin-top: 46px;
+    width: 290px;
     background: #000;
   }
 }
@@ -239,7 +245,7 @@ $home-container-width: 1630px;
 .elevator-container{
   position: fixed;
   top: 300px;
-  right: 70px;
+  right: 5px;
   z-index: 10;
   border: 1px solid #ddd;
   border-radius: 15%;

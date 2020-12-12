@@ -16,7 +16,7 @@ const WrapReport: React.FC = () => {
     const renderCarousel = () => {
         return (
             <div className="carousel-container" style={{
-                background: `center / contain no-repeat url(${carouselImg})`
+                background: `url(${carouselImg}) 0% 0% / 100% 100% no-repeat`
             }}>
             </div>
         )
